@@ -64,6 +64,7 @@ let g:go_version_warning = 0
 " F6自动格式化代码并保存
 noremap <F6> :Autoformat<CR>:w<CR>
 let g:autoformat_verbosemode=1
+"
 "--ctags setting--
 "" 按下F5重新生成tag文件，并更新taglist
 map <F5> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR><CR> :TlistUpdate<CR>
