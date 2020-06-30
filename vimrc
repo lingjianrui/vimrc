@@ -70,6 +70,12 @@ nnoremap <leader>8 :8b<cr>
 nnoremap <leader>9 :9b<cr>
 "快速打开GoDoc
 map <leader>doc :GoDoc<cr>
+"快速govet 检查问题
+map <leader>vet :GoVet<cr>
+"快速查找引用
+map <leader>ref :GoReferrers<cr>
+map <leader>cal :GoCallees<cr>
+map <leader>imp :GoImplements<cr>
 "-----------------------common------------------------
 syntax on
 " 设置显示行号
@@ -141,6 +147,7 @@ let g:tagbar_ctags_bin='/usr/bin/ctags'
 let g:tagbar_width=30
 let g:tagbar_right_=1
 map <leader>tb :TagbarToggle<CR>
+autocmd BufReadPost *.go call tagbar#autoopen()
 "-------------------YouCompleteMe 配置------------------
 let g:ycm_semantic_triggers =  {
             \ 'c,cpp,python,java,go,erlang,perl': ['re!\w{2}'],
