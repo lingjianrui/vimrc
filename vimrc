@@ -73,9 +73,15 @@ map <leader>doc :GoDoc<cr>
 "快速govet 检查问题
 map <leader>vet :GoVet<cr>
 "快速查找引用
-map <leader>ref :GoReferrers<cr>
+nnoremap <leader>ref :GoReferrers<cr>
 map <leader>cal :GoCallees<cr>
 map <leader>imp :GoImplements<cr>
+map <leader>debug :GoDebugStart .<cr>
+map <leader>bb :GoDebugBreakpoint<cr>
+map <leader>nx :GoDebugNext<cr>
+map <leader>ns :GoDebugStep<cr>
+"快速编辑代码碎片
+map <leader>script :UltiSnipsEdit<cr>
 "-----------------------common------------------------
 syntax on
 " 设置显示行号
@@ -120,7 +126,7 @@ hi Pmenu cterm=bold ctermfg=white ctermbg=darkgreen guifg=#ffffff guibg=#000000
 " 不显示go语言插件警告
 let g:go_version_warning = 0
 " F6自动格式化代码并保存
-noremap <F6> :Autoformat<CR>:w<CR>
+noremap <F8> :Autoformat<CR>:w<CR>
 let g:autoformat_verbosemode=1
 " 打开文件自动折叠
 set fdm=indent
