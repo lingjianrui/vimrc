@@ -1,3 +1,5 @@
+"Author:lingjianrui
+"Email: toiklaun@gmail.com
 "----------------------Vundle----------------------
 set nocompatible              " be iMproved, required                                                                           
 filetype off " required                                                                                                
