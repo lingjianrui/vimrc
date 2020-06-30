@@ -31,6 +31,8 @@ Plugin 'ervandew/supertab'
 Plugin 'SirVer/ultisnips'
 " 代码片段快速补全
 Plugin 'honza/vim-snippets'
+" 自动格式化
+Plugin 'Chiel92/vim-autoformat'
 " 主题插件
 Plugin 'flazz/vim-colorschemes'
 call vundle#end()            " required                                                                                             
@@ -97,10 +99,10 @@ set term=screen-256color
 set backspace=indent,eol,start
 " 突出显示当前行
 set cursorline      
-hi CursorLine   cterm=bold ctermbg=black ctermfg=green
+hi CursorLine   cterm=bold ctermbg=darkgreen ctermfg=white
 hi CursorColumn cterm=NONE ctermbg=cyan ctermfg=white 
 hi Comment cterm=bold ctermfg=lightblue
-hi Pmenu cterm=bold ctermfg=black ctermbg=188 guifg=#ffffff guibg=#000000
+hi Pmenu cterm=bold ctermfg=white ctermbg=darkgreen guifg=#ffffff guibg=#000000
 " 不显示go语言插件警告
 let g:go_version_warning = 0
 " F6自动格式化代码并保存
@@ -139,6 +141,7 @@ let g:ycm_semantic_triggers =  {
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 let g:SuperTabDefaultCompletionType = '<C-n>'
+nnoremap <leader>k :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " better key bindings for UltiSnipsExpandTrigger
 let g:UltiSnipsSnippetDirectories = ['~/.vim/UltiSnips', 'UltiSnips']
