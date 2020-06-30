@@ -1,6 +1,9 @@
-# vimrc
+# Golang Vim 配置
+Demo
+![image](https://raw.githubusercontent.com/lingjianrui/vimrc/master/image/demo.gif)
 系统环境Centos 7.3
 自己用的vim配置
+
 # Go1.13安装 
 **这里比较坑 vim-go插件不支持Go1.12的module模式 所以老老实实升级吧**
 ```
